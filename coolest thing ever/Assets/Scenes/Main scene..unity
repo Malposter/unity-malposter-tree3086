@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 323660945}
   - component: {fileID: 323660944}
   - component: {fileID: 323660943}
+  - component: {fileID: 323660947}
   m_Layer: 0
   m_Name: button
   m_TagString: Untagged
@@ -151,9 +152,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
   _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":212.0,"y":46.01303},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"e9868a79-4bec-40d8-ba5f-0c1b9fe20649","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"8b911a66-cf19-4544-9f51-c297a09d0103","$version":"A","$type":"Unity.VisualScripting.Update","$id":"12"},{"chainable":false,"parameterNames":["collider1","collider2"],"member":{"name":"IsTouching","parameterTypes":["UnityEngine.Collider2D","UnityEngine.Collider2D"],"targetType":"UnityEngine.Physics2D","targetTypeName":"UnityEngine.Physics2D","$version":"A"},"defaultValues":{"%collider1":{"$content":0,"$type":"UnityEngine.Object"},"%collider2":null},"position":{"x":120.0,"y":-2.0},"guid":"75cde776-5b36-4996-a5fc-1519c3bda187","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"14"},{"type":"UnityEngine.Collider2D","value":null,"defaultValues":{},"position":{"x":-35.0,"y":-150.0},"guid":"02721596-087d-4a2e-9649-f9e625d10eba","$version":"A","$type":"Unity.VisualScripting.Literal"},{"sourceUnit":{"$ref":"12"},"sourceKey":"trigger","destinationUnit":{"$ref":"14"},"destinationKey":"enter","guid":"4913fddd-285f-447f-b9e1-83a67fc2bfdb","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}}}'
+    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":682.4001,"y":46.01302},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"e9868a79-4bec-40d8-ba5f-0c1b9fe20649","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"8b911a66-cf19-4544-9f51-c297a09d0103","$version":"A","$type":"Unity.VisualScripting.Update","$id":"12"},{"chainable":false,"parameterNames":["collider1","collider2"],"member":{"name":"IsTouching","parameterTypes":["UnityEngine.Collider2D","UnityEngine.Collider2D"],"targetType":"UnityEngine.Physics2D","targetTypeName":"UnityEngine.Physics2D","$version":"A"},"defaultValues":{"%collider1":{"$content":0,"$type":"UnityEngine.Object"},"%collider2":{"$content":1,"$type":"UnityEngine.Object"}},"position":{"x":120.0,"y":-2.0},"guid":"75cde776-5b36-4996-a5fc-1519c3bda187","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"14"},{"type":"UnityEngine.Collider2D","value":null,"defaultValues":{},"position":{"x":243.0,"y":-133.0},"guid":"02721596-087d-4a2e-9649-f9e625d10eba","$version":"A","$type":"Unity.VisualScripting.Literal"},{"kind":"Object","defaultValues":{"name":{"$content":"on?","$type":"System.String"},"object":null},"position":{"x":424.0,"y":-8.0},"guid":"a0bf8500-3b6f-4c29-82ae-5e5d2efb9e55","$version":"A","$type":"Unity.VisualScripting.SetVariable","$id":"20"},{"sourceUnit":{"$ref":"12"},"sourceKey":"trigger","destinationUnit":{"$ref":"14"},"destinationKey":"enter","guid":"4913fddd-285f-447f-b9e1-83a67fc2bfdb","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"exit","destinationUnit":{"$ref":"20"},"destinationKey":"assign","guid":"beca3c17-4626-4100-8e16-81ddff2fe39e","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"result","destinationUnit":{"$ref":"20"},"destinationKey":"input","guid":"00b16e7b-ecb5-4c01-a80f-32a74b96d253","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
     _objectReferences:
     - {fileID: 1909566961946774250}
+    - {fileID: 323660947}
 --- !u!114 &323660944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"on?","value":null,"typeHandle":{"Identification":null,"$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!212 &323660945
 SpriteRenderer:
@@ -243,6 +245,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &323660947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323660942}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &404579122
 PrefabInstance:
   m_ObjectHideFlags: 0
