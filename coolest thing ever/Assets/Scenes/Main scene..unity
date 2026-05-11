@@ -151,8 +151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
   _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":128.0,"y":53.59999},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"e9868a79-4bec-40d8-ba5f-0c1b9fe20649","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"8b911a66-cf19-4544-9f51-c297a09d0103","$version":"A","$type":"Unity.VisualScripting.Update"}],"$version":"A"}}}'
-    _objectReferences: []
+    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":212.0,"y":46.01303},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"e9868a79-4bec-40d8-ba5f-0c1b9fe20649","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"8b911a66-cf19-4544-9f51-c297a09d0103","$version":"A","$type":"Unity.VisualScripting.Update","$id":"12"},{"chainable":false,"parameterNames":["collider1","collider2"],"member":{"name":"IsTouching","parameterTypes":["UnityEngine.Collider2D","UnityEngine.Collider2D"],"targetType":"UnityEngine.Physics2D","targetTypeName":"UnityEngine.Physics2D","$version":"A"},"defaultValues":{"%collider1":{"$content":0,"$type":"UnityEngine.Object"},"%collider2":null},"position":{"x":120.0,"y":-2.0},"guid":"75cde776-5b36-4996-a5fc-1519c3bda187","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"14"},{"type":"UnityEngine.Collider2D","value":null,"defaultValues":{},"position":{"x":-35.0,"y":-150.0},"guid":"02721596-087d-4a2e-9649-f9e625d10eba","$version":"A","$type":"Unity.VisualScripting.Literal"},{"sourceUnit":{"$ref":"12"},"sourceKey":"trigger","destinationUnit":{"$ref":"14"},"destinationKey":"enter","guid":"4913fddd-285f-447f-b9e1-83a67fc2bfdb","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}}}'
+    _objectReferences:
+    - {fileID: 1909566961946774250}
 --- !u!114 &323660944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,13 +1237,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7128750724551506913, guid: 3415dd05e071c2b49bd4b5effa60910f, type: 3}
       propertyPath: m_Name
-      value: level Variant
+      value: Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3415dd05e071c2b49bd4b5effa60910f, type: 3}
+--- !u!61 &1909566961946774250 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5866968660981776793, guid: 3415dd05e071c2b49bd4b5effa60910f, type: 3}
+  m_PrefabInstance: {fileID: 1909566961946774249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5275769696692695311
 PrefabInstance:
   m_ObjectHideFlags: 0
